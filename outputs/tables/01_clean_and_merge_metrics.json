@@ -1,0 +1,159 @@
+{
+  "generated_at_utc": "2026-11-09T09:24:21.298478+00:00",
+  "accessed_date": "2026-11-09",
+  "data_source": "Divvy System Data & NOAA NCEI",
+  "input_assets": {
+    "divvy": [
+      "data/raw/divvy/synthetic_divvy_trips.csv"
+    ],
+    "noaa": [
+      "data/raw/noaa/synthetic_noaa_daily_summaries.csv"
+    ]
+  },
+  "integrity_gate_status": "PASS",
+  "trip_cleaning": {
+    "input_rows": 240,
+    "clean_rows": 239,
+    "total_dropped": 1,
+    "total_drop_pct": 0.416667,
+    "funnel": [
+      {
+        "stage": "input",
+        "rows_entering": 240,
+        "rows_dropped": 0,
+        "drop_pct_of_entering": 0.0,
+        "drop_pct_of_initial": 0.0,
+        "rows_remaining": 240,
+        "remaining_pct_of_initial": 100.0
+      },
+      {
+        "stage": "duplicate_ride_id",
+        "rows_entering": 240,
+        "rows_dropped": 0,
+        "drop_pct_of_entering": 0.0,
+        "drop_pct_of_initial": 0.0,
+        "rows_remaining": 240,
+        "remaining_pct_of_initial": 100.0
+      },
+      {
+        "stage": "invalid_or_missing_timestamp",
+        "rows_entering": 240,
+        "rows_dropped": 0,
+        "drop_pct_of_entering": 0.0,
+        "drop_pct_of_initial": 0.0,
+        "rows_remaining": 240,
+        "remaining_pct_of_initial": 100.0
+      },
+      {
+        "stage": "timestamp_reversed",
+        "rows_entering": 240,
+        "rows_dropped": 0,
+        "drop_pct_of_entering": 0.0,
+        "drop_pct_of_initial": 0.0,
+        "rows_remaining": 240,
+        "remaining_pct_of_initial": 100.0
+      },
+      {
+        "stage": "duration_under_1_min",
+        "rows_entering": 240,
+        "rows_dropped": 0,
+        "drop_pct_of_entering": 0.0,
+        "drop_pct_of_initial": 0.0,
+        "rows_remaining": 240,
+        "remaining_pct_of_initial": 100.0
+      },
+      {
+        "stage": "duration_over_1440_min",
+        "rows_entering": 240,
+        "rows_dropped": 0,
+        "drop_pct_of_entering": 0.0,
+        "drop_pct_of_initial": 0.0,
+        "rows_remaining": 240,
+        "remaining_pct_of_initial": 100.0
+      },
+      {
+        "stage": "coordinates_missing_or_outside_chicago",
+        "rows_entering": 240,
+        "rows_dropped": 1,
+        "drop_pct_of_entering": 0.416667,
+        "drop_pct_of_initial": 0.416667,
+        "rows_remaining": 239,
+        "remaining_pct_of_initial": 99.583333
+      },
+      {
+        "stage": "clean_output",
+        "rows_entering": 239,
+        "rows_dropped": 0,
+        "drop_pct_of_entering": 0.0,
+        "drop_pct_of_initial": 0.0,
+        "rows_remaining": 239,
+        "remaining_pct_of_initial": 99.583333
+      }
+    ]
+  },
+  "station_harmonization": {
+    "valid_station_observations": 479,
+    "historical_station_ids": 4,
+    "station_name_coordinate_combinations": 4,
+    "unique_rounded_coordinates": 3,
+    "canonical_stations": 3,
+    "same_name_different_location_names": 0,
+    "historical_ids_in_same_name_different_location": 0,
+    "same_location_different_id_clusters": 1,
+    "historical_ids_in_same_location_different_id": 2,
+    "historical_ids_reused_across_locations": 0,
+    "historical_ids_with_either_name_or_location_drift": 2,
+    "max_coordinate_to_canonical_distance_m": 0.0,
+    "clustering_radius_m": 50
+  },
+  "weather_standardization": {
+    "input_unit_system": "metric",
+    "invalid_date_rows": 0,
+    "duplicate_station_date_rows_collapsed": 0,
+    "ohare_dates": 17,
+    "midway_dates": 17,
+    "combined_dates": 17,
+    "imputed_from_midway_by_metric": {
+      "PRCP": 1,
+      "SNWD": 0,
+      "SNOW": 0,
+      "AWND": 0,
+      "TMAX": 0,
+      "TMIN": 0
+    },
+    "remaining_missing_by_metric_all_dates": {
+      "PRCP": 0,
+      "SNWD": 0,
+      "SNOW": 0,
+      "AWND": 0,
+      "TMAX": 0,
+      "TMIN": 0
+    },
+    "metric_range_violations": {
+      "PRCP": 0,
+      "SNWD": 0,
+      "SNOW": 0,
+      "AWND": 0,
+      "TMAX": 0,
+      "TMIN": 0
+    },
+    "tmax_below_tmin_rows": 0
+  },
+  "panels": {
+    "clean_trip_rows": 239,
+    "trip_dates": 17,
+    "daily_panel_rows": 125,
+    "hourly_feature_rows": 239,
+    "daily_panel_unmatched_weather_rows": 0,
+    "daily_panel_rows_with_incomplete_weather": 0,
+    "trip_dates_missing_weather": [],
+    "covid_trip_rows": 0
+  },
+  "outputs": {
+    "cleaning_funnel": "outputs/tables/01_cleaning_funnel.csv",
+    "station_harmonization_map": "outputs/tables/01_station_harmonization_map.csv",
+    "standardized_weather": "outputs/tables/01_weather_daily_standardized.csv",
+    "station_daily_panel": "data/processed/station_daily_weather_panel.parquet",
+    "station_hourly_features": "data/processed/station_hourly_weather_features.parquet"
+  }
+}

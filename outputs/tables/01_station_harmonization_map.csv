@@ -1,0 +1,5 @@
+station_id,station_name,station_name_normalized,lat_round4,lng_round4,canonical_station_id,canonical_lat,canonical_lng,cluster_label,occurrence_count,observed_roles,distance_to_canonical_m,same_name_different_location_flag,same_location_different_id_flag,station_id_multiple_locations_flag,data_source,version_accessed_date
+SYN-A-v1,Synthetic Lake,synthetic lake,41.881,-87.623,CAN_436C57A652,41.881,-87.623,0,107,end|start,0.0,False,True,False,Divvy System Data & NOAA NCEI,2026-11-09
+SYN-A-v2,Synthetic Lake,synthetic lake,41.881,-87.623,CAN_436C57A652,41.881,-87.623,0,127,end|start,0.0,False,True,False,Divvy System Data & NOAA NCEI,2026-11-09
+SYN-B,Synthetic Loop,synthetic loop,41.8837,-87.6324,CAN_5AD38AB76E,41.8837,-87.6324,1,109,end|start,0.0,False,False,False,Divvy System Data & NOAA NCEI,2026-11-09
+SYN-C,Synthetic Park,synthetic park,41.895,-87.618,CAN_B457D93EFD,41.895,-87.618,2,136,end|start,0.0,False,False,False,Divvy System Data & NOAA NCEI,2026-11-09

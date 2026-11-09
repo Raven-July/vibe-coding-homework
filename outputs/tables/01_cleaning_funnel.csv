@@ -1,0 +1,9 @@
+stage,rows_entering,rows_dropped,drop_pct_of_entering,drop_pct_of_initial,rows_remaining,remaining_pct_of_initial,data_source,version_accessed_date
+input,240,0,0.0,0.0,240,100.0,Divvy System Data & NOAA NCEI,2026-11-09
+duplicate_ride_id,240,0,0.0,0.0,240,100.0,Divvy System Data & NOAA NCEI,2026-11-09
+invalid_or_missing_timestamp,240,0,0.0,0.0,240,100.0,Divvy System Data & NOAA NCEI,2026-11-09
+timestamp_reversed,240,0,0.0,0.0,240,100.0,Divvy System Data & NOAA NCEI,2026-11-09
+duration_under_1_min,240,0,0.0,0.0,240,100.0,Divvy System Data & NOAA NCEI,2026-11-09
+duration_over_1440_min,240,0,0.0,0.0,240,100.0,Divvy System Data & NOAA NCEI,2026-11-09
+coordinates_missing_or_outside_chicago,240,1,0.416667,0.416667,239,99.583333,Divvy System Data & NOAA NCEI,2026-11-09
+clean_output,239,0,0.0,0.0,239,99.583333,Divvy System Data & NOAA NCEI,2026-11-09
