@@ -1,0 +1,4 @@
+asset,type,rows,size_bytes,modified_utc,note,data_source,version_accessed_date
+data/raw/divvy/synthetic_divvy_trips.csv,divvy_trip,240,37462,2026-11-09T09:02:03.720111+00:00,,Divvy System Data & NOAA NCEI,2026-11-09
+data/raw/divvy/synthetic_station_information.json,divvy_station_gbfs,4,725,2026-11-09T09:02:03.723420+00:00,,Divvy System Data & NOAA NCEI,2026-11-09
+data/raw/noaa/synthetic_noaa_daily_summaries.csv,noaa_weather,34,3117,2026-11-09T09:02:03.730664+00:00,,Divvy System Data & NOAA NCEI,2026-11-09

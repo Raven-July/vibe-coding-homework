@@ -1,0 +1,54 @@
+{
+  "generated_at_utc": "2026-11-09T09:04:42.893139+00:00",
+  "accessed_date": "2026-11-09",
+  "inferred_data_version_date": "2024-01-17",
+  "data_source": "Divvy System Data & NOAA NCEI",
+  "divvy": {
+    "rows": 240,
+    "started_at_min_chicago": "2024-01-01T06:00:00-06:00",
+    "started_at_max_chicago": "2024-01-17T00:25:00-06:00",
+    "invalid_started_at": 0,
+    "missingness": {
+      "ride_id": 0,
+      "rideable_type": 0,
+      "started_at": 0,
+      "ended_at": 0,
+      "start_station_name": 0,
+      "start_station_id": 0,
+      "end_station_name": 0,
+      "end_station_id": 1,
+      "start_lat": 0,
+      "start_lng": 0,
+      "end_lat": 1,
+      "end_lng": 1,
+      "member_casual": 0
+    },
+    "rideable_type": {
+      "electric_bike": 132,
+      "classic_bike": 108
+    },
+    "member_casual": {
+      "member": 179,
+      "casual": 61
+    },
+    "regime_counts": {
+      "2023_present": 240
+    }
+  },
+  "noaa": [
+    {
+      "station": "USW00094846",
+      "rows": 17,
+      "date_min": "2024-01-01",
+      "date_max": "2024-01-17",
+      "tmax_lt_tmin_rows": 0
+    },
+    {
+      "station": "USW00014819",
+      "rows": 17,
+      "date_min": "2024-01-01",
+      "date_max": "2024-01-17",
+      "tmax_lt_tmin_rows": 0
+    }
+  ]
+}

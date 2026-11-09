@@ -1,0 +1,25 @@
+# Divvy/NOAA source and derived datasets are local-only. Do not weaken these rules.
+/data/raw/**
+/data/processed/**
+/data/**/*.csv
+/data/**/*.json
+/data/**/*.parquet
+/data/**/*.zip
+/data/**/*.csv.gz
+
+# Python / notebooks / environments
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+.venv/
+venv/
+.env
+
+# OS / editor artifacts
+.DS_Store
+.idea/
+.vscode/
+

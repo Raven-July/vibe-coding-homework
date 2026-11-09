@@ -1,0 +1,14 @@
+field,missing_count,missing_pct,data_source,version_accessed_date
+ride_id,0,0.0,Divvy System Data & NOAA NCEI,2026-11-09
+rideable_type,0,0.0,Divvy System Data & NOAA NCEI,2026-11-09
+started_at,0,0.0,Divvy System Data & NOAA NCEI,2026-11-09
+ended_at,0,0.0,Divvy System Data & NOAA NCEI,2026-11-09
+start_station_name,0,0.0,Divvy System Data & NOAA NCEI,2026-11-09
+start_station_id,0,0.0,Divvy System Data & NOAA NCEI,2026-11-09
+end_station_name,0,0.0,Divvy System Data & NOAA NCEI,2026-11-09
+end_station_id,1,0.4167,Divvy System Data & NOAA NCEI,2026-11-09
+start_lat,0,0.0,Divvy System Data & NOAA NCEI,2026-11-09
+start_lng,0,0.0,Divvy System Data & NOAA NCEI,2026-11-09
+end_lat,1,0.4167,Divvy System Data & NOAA NCEI,2026-11-09
+end_lng,1,0.4167,Divvy System Data & NOAA NCEI,2026-11-09
+member_casual,0,0.0,Divvy System Data & NOAA NCEI,2026-11-09

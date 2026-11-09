@@ -1,0 +1,13 @@
+station,role,metric,expected_unit,rows,missing_count,missing_pct,observed_min,observed_max,unit_plausibility,data_source,version_accessed_date
+USW00094846,O'Hare (primary),PRCP,mm,17,1,5.8824,0.0,12.5,PASS: SI-plausible,Divvy System Data & NOAA NCEI,2026-11-09
+USW00094846,O'Hare (primary),SNWD,mm,17,0,0.0,0.0,22.0,PASS: SI-plausible,Divvy System Data & NOAA NCEI,2026-11-09
+USW00094846,O'Hare (primary),SNOW,mm,17,0,0.0,0.0,5.2,PASS: SI-plausible,Divvy System Data & NOAA NCEI,2026-11-09
+USW00094846,O'Hare (primary),AWND,m/s,17,0,0.0,2.1,8.5,PASS: SI-plausible,Divvy System Data & NOAA NCEI,2026-11-09
+USW00094846,O'Hare (primary),TMAX,°C,17,0,0.0,1.6,9.0,PASS: SI-plausible,Divvy System Data & NOAA NCEI,2026-11-09
+USW00094846,O'Hare (primary),TMIN,°C,17,0,0.0,-6.4,1.0,PASS: SI-plausible,Divvy System Data & NOAA NCEI,2026-11-09
+USW00014819,Midway (backup),PRCP,mm,17,0,0.0,0.0,3.8,PASS: SI-plausible,Divvy System Data & NOAA NCEI,2026-11-09
+USW00014819,Midway (backup),SNWD,mm,17,0,0.0,0.0,22.0,PASS: SI-plausible,Divvy System Data & NOAA NCEI,2026-11-09
+USW00014819,Midway (backup),SNOW,mm,17,0,0.0,0.0,3.4,PASS: SI-plausible,Divvy System Data & NOAA NCEI,2026-11-09
+USW00014819,Midway (backup),AWND,m/s,17,1,5.8824,3.4,8.1,PASS: SI-plausible,Divvy System Data & NOAA NCEI,2026-11-09
+USW00014819,Midway (backup),TMAX,°C,17,0,0.0,2.3,9.7,PASS: SI-plausible,Divvy System Data & NOAA NCEI,2026-11-09
+USW00014819,Midway (backup),TMIN,°C,17,0,0.0,-5.7,1.7,PASS: SI-plausible,Divvy System Data & NOAA NCEI,2026-11-09
