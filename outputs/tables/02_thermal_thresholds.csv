@@ -1,0 +1,9 @@
+member_casual,temperature_bin,bin_days,tmax_mean_c,tmax_min_c,tmax_max_c,mean_daily_trips,daily_trips_sd,temperature_bin_left_c,temperature_bin_right_c,demand_change_pct_vs_previous_bin,growth_acceleration_pct_points,threshold_role,minimum_support_met,data_source,version_accessed_date
+casual,"[0.0, 3.0)",2,1.8,1.6,2.0,1.0,1.4142135623730951,0.0,3.0,,,,False,Divvy System Data & NOAA NCEI,2026-11-09
+casual,"[3.0, 6.0)",5,4.2,3.0,5.6,3.6,1.51657508881031,3.0,6.0,260.0,,,True,Divvy System Data & NOAA NCEI,2026-11-09
+casual,"[6.0, 9.0)",9,7.7666666666666675,6.0,8.9,4.444444444444445,2.006932429798716,6.0,9.0,23.456790123456784,-236.54320987654322,,True,Divvy System Data & NOAA NCEI,2026-11-09
+casual,"[9.0, 12.0)",1,9.0,9.0,9.0,1.0,,9.0,12.0,-77.5,-100.95679012345678,,False,Divvy System Data & NOAA NCEI,2026-11-09
+member,"[0.0, 3.0)",2,1.8,1.6,2.0,5.0,5.656854249492381,0.0,3.0,,,,False,Divvy System Data & NOAA NCEI,2026-11-09
+member,"[3.0, 6.0)",5,4.2,3.0,5.6,11.4,1.51657508881031,3.0,6.0,128.00000000000003,,,True,Divvy System Data & NOAA NCEI,2026-11-09
+member,"[6.0, 9.0)",9,7.7666666666666675,6.0,8.9,10.777777777777779,1.922093765778466,6.0,9.0,-5.458089668615984,-133.45808966861603,,True,Divvy System Data & NOAA NCEI,2026-11-09
+member,"[9.0, 12.0)",1,9.0,9.0,9.0,14.0,,9.0,12.0,29.896907216494828,35.354996885110815,,False,Divvy System Data & NOAA NCEI,2026-11-09

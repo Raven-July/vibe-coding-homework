@@ -1,0 +1,71 @@
+{
+  "generated_at_utc": "2026-11-09T09:33:25.712541+00:00",
+  "accessed_date": "2026-11-09",
+  "data_source": "Divvy System Data & NOAA NCEI",
+  "input_panel": "data/processed/station_daily_weather_panel.parquet",
+  "integrity": {
+    "status": "PASS",
+    "panel_rows": 125,
+    "trip_count_sum": 239,
+    "date_min": "2024-01-01",
+    "date_max": "2024-01-17",
+    "calendar_days": 17,
+    "duplicate_composite_keys": 0,
+    "inconsistent_weather_dates": 0,
+    "missing_calendar_dates": [],
+    "weather_missing_cells": 0
+  },
+  "multiple_testing": "Benjamini-Hochberg FDR across all finite correlation p-values",
+  "duration_quantile_limitation": "The station-day panel has no trip-level durations; duration quartiles are trip-count-weighted quantiles of station-day cell medians and are therefore approximations.",
+  "thermal_threshold_analysis": {
+    "bin_width_c": 3.0,
+    "minimum_bin_days": 3,
+    "date_count": 17,
+    "temperature_min_c": 1.6,
+    "temperature_max_c": 9.0,
+    "temperature_span_c": 7.4,
+    "detection_requirements": "at least 60 days, 18°C span, and 6 supported bins; heat threshold must start at >=27°C",
+    "by_customer_type": {
+      "casual": {
+        "supported_bins": 2,
+        "data_sufficient_for_threshold_detection": false,
+        "startup_threshold_c": null,
+        "heat_suppression_threshold_c": null
+      },
+      "member": {
+        "supported_bins": 2,
+        "data_sufficient_for_threshold_detection": false,
+        "startup_threshold_c": null,
+        "heat_suppression_threshold_c": null
+      }
+    }
+  },
+  "adverse_weather_retention": {
+    "wind_p90_mps": 6.9,
+    "clear_baseline_definition": "PRCP=0, SNOW=0, SNWD=0, and AWND<=sample P90",
+    "clear_baseline_days": 1,
+    "condition_day_counts": {
+      "light_rain_0_to_5mm": 8,
+      "heavy_rain_ge_5mm": 2,
+      "snow_or_snow_depth": 15,
+      "strong_wind_gt_p90": 1
+    },
+    "reliable_estimates": 0,
+    "reliability_rule": "event, clear, and matched event days >=5; residual df >=5; converged model"
+  },
+  "core_findings": [
+    "样本覆盖 17 天、239 次行程。",
+    "日均客群单量：casual=3.59, member=10.47。",
+    "日均车型单量：classic_bike=6.35, electric_bike=7.71。",
+    "最强 Spearman 关系：All × TMAX，rho=0.496，FDR p=0.3851。",
+    "Pearson/Spearman 共发现 0 个 FDR<0.05 的关系。",
+    "温度拐点未作确认：日期、温度跨度或有效分箱未达到预设充分性门槛。",
+    "恶劣天气留存率均标为探索性：严格晴朗基准仅 1 天，无法可靠识别固定效应。"
+  ],
+  "outputs": {
+    "group_summary": "outputs/tables/02_group_summary_stats.csv",
+    "weather_correlations": "outputs/tables/02_weather_correlations.csv",
+    "thermal_thresholds": "outputs/tables/02_thermal_thresholds.csv",
+    "adverse_weather_retention": "outputs/tables/02_adverse_weather_retention.csv"
+  }
+}
