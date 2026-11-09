@@ -1,0 +1,3 @@
+model,k,silhouette_score,status,data_source,version_accessed_date
+KMeans,2,0.09143811241243151,ok,Divvy System Data & NOAA NCEI,2026-11-09
+GaussianMixture,2,0.09143811241243151,ok,Divvy System Data & NOAA NCEI,2026-11-09

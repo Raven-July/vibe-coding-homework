@@ -1,0 +1,21 @@
+segment,member_casual,rideable_type,weather_condition,retention_ratio,event_days,estimation_note,data_source,version_accessed_date
+Member-Classic,member,classic_bike,Clear baseline,1.0,1,weekday-normalized demand index; clear baseline fixed to 1.0,Divvy System Data & NOAA NCEI,2026-11-09
+Member-Classic,member,classic_bike,Light rain,1.05890016957329,8,weekday-normalized demand index; clear baseline fixed to 1.0,Divvy System Data & NOAA NCEI,2026-11-09
+Member-Classic,member,classic_bike,Heavy rain,0.9314850818814027,2,weekday-normalized demand index; clear baseline fixed to 1.0,Divvy System Data & NOAA NCEI,2026-11-09
+Member-Classic,member,classic_bike,Strong wind,1.217033390525464,3,weekday-normalized demand index; clear baseline fixed to 1.0,Divvy System Data & NOAA NCEI,2026-11-09
+Member-Classic,member,classic_bike,Snow/depth,0.9621760405984722,15,weekday-normalized demand index; clear baseline fixed to 1.0,Divvy System Data & NOAA NCEI,2026-11-09
+Member-Electric,member,electric_bike,Clear baseline,1.0,1,weekday-normalized demand index; clear baseline fixed to 1.0,Divvy System Data & NOAA NCEI,2026-11-09
+Member-Electric,member,electric_bike,Light rain,0.7712197823206733,8,weekday-normalized demand index; clear baseline fixed to 1.0,Divvy System Data & NOAA NCEI,2026-11-09
+Member-Electric,member,electric_bike,Heavy rain,1.2174248655745146,2,weekday-normalized demand index; clear baseline fixed to 1.0,Divvy System Data & NOAA NCEI,2026-11-09
+Member-Electric,member,electric_bike,Strong wind,1.041011116564563,3,weekday-normalized demand index; clear baseline fixed to 1.0,Divvy System Data & NOAA NCEI,2026-11-09
+Member-Electric,member,electric_bike,Snow/depth,1.0058043809625998,15,weekday-normalized demand index; clear baseline fixed to 1.0,Divvy System Data & NOAA NCEI,2026-11-09
+Casual-Classic,casual,classic_bike,Clear baseline,1.0,1,weekday-normalized demand index; clear baseline fixed to 1.0,Divvy System Data & NOAA NCEI,2026-11-09
+Casual-Classic,casual,classic_bike,Light rain,0.8802928722653494,8,weekday-normalized demand index; clear baseline fixed to 1.0,Divvy System Data & NOAA NCEI,2026-11-09
+Casual-Classic,casual,classic_bike,Heavy rain,0.4755244755244755,2,weekday-normalized demand index; clear baseline fixed to 1.0,Divvy System Data & NOAA NCEI,2026-11-09
+Casual-Classic,casual,classic_bike,Strong wind,0.9357798165137613,3,weekday-normalized demand index; clear baseline fixed to 1.0,Divvy System Data & NOAA NCEI,2026-11-09
+Casual-Classic,casual,classic_bike,Snow/depth,0.911276491093005,15,weekday-normalized demand index; clear baseline fixed to 1.0,Divvy System Data & NOAA NCEI,2026-11-09
+Casual-Electric,casual,electric_bike,Clear baseline,1.0,1,weekday-normalized demand index; clear baseline fixed to 1.0,Divvy System Data & NOAA NCEI,2026-11-09
+Casual-Electric,casual,electric_bike,Light rain,0.9192245295262815,8,weekday-normalized demand index; clear baseline fixed to 1.0,Divvy System Data & NOAA NCEI,2026-11-09
+Casual-Electric,casual,electric_bike,Heavy rain,0.9608695652173913,2,weekday-normalized demand index; clear baseline fixed to 1.0,Divvy System Data & NOAA NCEI,2026-11-09
+Casual-Electric,casual,electric_bike,Strong wind,1.082564778216952,3,weekday-normalized demand index; clear baseline fixed to 1.0,Divvy System Data & NOAA NCEI,2026-11-09
+Casual-Electric,casual,electric_bike,Snow/depth,0.9719570789006221,15,weekday-normalized demand index; clear baseline fixed to 1.0,Divvy System Data & NOAA NCEI,2026-11-09

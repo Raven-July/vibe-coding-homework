@@ -1,0 +1,120 @@
+{
+  "generated_at_utc": "2026-11-09T10:17:32.250483+00:00",
+  "accessed_date": "2026-11-09",
+  "data_source": "Divvy System Data & NOAA NCEI",
+  "input": {
+    "daily_rows": 125,
+    "hourly_rows": 239,
+    "dates": 17,
+    "date_min": "2024-01-01T00:00:00",
+    "date_max": "2024-01-17T00:00:00",
+    "total_trips": 239
+  },
+  "station_feature_engineering": {
+    "all_stations": 3,
+    "active_stations": 3,
+    "excluded_low_volume_stations": 0,
+    "minimum_station_trips": 20,
+    "filter_note": "fixed_minimum_total_trips",
+    "rain_definition": "PRCP_mm > 0",
+    "cold_wind_definition": "TMAX_C <= sample P25 (4.300 C) or AWND_mps >= sample P90 (6.900 m/s)",
+    "retention_adjustment": "event/non-event ratio after empirical-Bayes weekday normalization"
+  },
+  "clustering": {
+    "requested_k_candidates": [
+      3,
+      4,
+      5,
+      6
+    ],
+    "valid_k_candidates": [
+      2
+    ],
+    "selected_model": "KMeans",
+    "selected_k": 2,
+    "silhouette_score": 0.09143811241243151,
+    "small_sample_fallback": true,
+    "fallback_reason": "No k in 3..6 satisfies k < n_stations; k=2 is an exploratory demonstration.",
+    "trials": [
+      {
+        "model": "KMeans",
+        "k": 2,
+        "silhouette_score": 0.09143811241243151,
+        "status": "ok"
+      },
+      {
+        "model": "GaussianMixture",
+        "k": 2,
+        "silhouette_score": 0.09143811241243151,
+        "status": "ok"
+      }
+    ]
+  },
+  "anomaly_detection": {
+    "model": "Ridge on log1p station-day demand",
+    "regular_pattern_controls": [
+      "canonical_station_id",
+      "day_of_week_label",
+      "temporal_regime",
+      "TMAX_C",
+      "TMAX_C_sq",
+      "day_index"
+    ],
+    "rows_scored": 51,
+    "station_dates": 17,
+    "top_events_returned": 20,
+    "wind_p90_mps": 6.9,
+    "residual_standardization": "within-station median/MAD Z-score (SD fallback)"
+  },
+  "temperature_response": {
+    "bin_width_c": 2.0,
+    "marginal_bends_c": {
+      "casual": 4.866666666666666,
+      "member": 2.8000000000000003
+    },
+    "sufficient_for_confirmatory_bend": false,
+    "sufficiency_rule": ">=60 dates and >=18 C span"
+  },
+  "weather_retention": {
+    "wind_p90_mps": 6.9,
+    "condition_day_counts": {
+      "Clear baseline": 1,
+      "Light rain": 8,
+      "Heavy rain": 2,
+      "Strong wind": 3,
+      "Snow/depth": 15
+    },
+    "interpretation": "Exploratory weekday-normalized index; overlapping conditions are not causal effects."
+  },
+  "key_readings": {
+    "lowest_adverse_weather_retention": {
+      "segment": "Casual-Classic",
+      "condition": "Heavy rain",
+      "retention_ratio": 0.4755244755244755,
+      "event_days": 2
+    },
+    "top_anomaly": {
+      "canonical_station_id": "CAN_B457D93EFD",
+      "trip_date": "2024-01-13",
+      "trip_count": 0.0,
+      "expected_trip_count": 3.4778162797470897,
+      "residual_z": -4.4064001813777836,
+      "weather_condition": "Snow/snow depth"
+    }
+  },
+  "limitations": [
+    "Current sample is a short synthetic winter validation set; claims are exploratory.",
+    "Weather conditions overlap; retention indices are descriptive, not causal.",
+    "Lakefront distance uses an approximate polyline."
+  ],
+  "outputs": {
+    "cluster_profiles": "outputs/tables/03_station_clusters_profile.csv",
+    "top_anomalies": "outputs/tables/03_top_anomalies.csv",
+    "station_assignments": "outputs/tables/03_station_cluster_assignments.csv",
+    "model_selection": "outputs/tables/03_cluster_model_selection.csv",
+    "temperature_response": "outputs/tables/03_temperature_response.csv",
+    "segment_weather_retention": "outputs/tables/03_segment_weather_retention.csv",
+    "figure_1": "outputs/figures/fig1_weather_nonlinear_response.png",
+    "figure_2": "outputs/figures/fig2_station_clusters_and_anomalies.png"
+  }
+}
