@@ -1,0 +1,34 @@
+{
+  "data_source": "Divvy System Data & NOAA NCEI",
+  "accessed_date": "2026-11-09",
+  "generator": "src/04_generate_presentation1_deliverables.py",
+  "input_artifacts": [
+    "00_asset_inventory.csv",
+    "00_data_inventory_metrics.json",
+    "00_data_inventory_report.md",
+    "00_divvy_missingness.csv",
+    "00_noaa_quality.csv",
+    "00_station_id_coordinate_comparison.csv",
+    "01_clean_and_merge_metrics.json",
+    "01_cleaning_funnel.csv",
+    "01_station_harmonization_map.csv",
+    "01_weather_daily_standardized.csv",
+    "02_adverse_weather_retention.csv",
+    "02_group_summary_stats.csv",
+    "02_statistical_analysis_metrics.json",
+    "02_thermal_thresholds.csv",
+    "02_weather_correlations.csv",
+    "03_cluster_model_selection.csv",
+    "03_clustering_anomalies_metrics.json",
+    "03_segment_weather_retention.csv",
+    "03_station_cluster_assignments.csv",
+    "03_station_clusters_profile.csv",
+    "03_temperature_response.csv",
+    "03_top_anomalies.csv"
+  ],
+  "output_documents": [
+    "docs/presentation1_report_and_hypotheses.md",
+    "docs/presentation1_ppt_outline.md"
+  ],
+  "empirical_number_policy": "All empirical numbers are read from outputs/tables at runtime."
+}
